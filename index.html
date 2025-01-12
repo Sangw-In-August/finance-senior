@@ -1,0 +1,704 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>장년층 맞춤형 금융 솔루션 분석 보고서</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0 30px;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+	padding: 8px
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="142a0841-2618-805a-9a56-e6322074529a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📊</span></div><h1 class="page-title">장년층 맞춤형 금융 솔루션 분석 보고서</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tools</th><td><span class="selected-value select-value-color-brown">Python</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>데이터 출처</th><td><span class="selected-value select-value-color-gray">통계청</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/link_gray.svg" style="width:14px;height:14px"/></span>코드보기 (github)</th><td><a href="https://github.com/Sangw-In-August/finance-senior/blob/main/%EC%9E%A5%EB%85%84%EC%B8%B5%20%EA%B8%88%EC%9C%B5%20%EC%86%94%EB%A3%A8%EC%85%98%20%EC%BD%94%EB%93%9C.ipynb">https://github.com/Sangw-In-August/finance-senior/blob/main/장년층 금융 솔루션 코드.ipynb</a></td></tr></tbody></table></header><div class="page-body"><figure id="142a0841-2618-80a2-8053-f7466d7bc9ff" class="image"><a href="b77f0f46-61a0-4bdd-adaa-9e7656723e48.png"><img style="width:700px" src="b77f0f46-61a0-4bdd-adaa-9e7656723e48.png"/></a></figure><p id="176a0841-2618-8016-bbee-dd2edac35391" class="">
+</p><h2 id="176a0841-2618-80fd-a2aa-f7c75671ff1e" class="block-color-blue_background">분석 배경 및 목적</h2><h3 id="176a0841-2618-8095-9b9c-f095125867f6" class="">분석 배경</h3><ul id="143a0841-2618-80f1-b206-d1a386fd7671" class="bulleted-list"><li style="list-style-type:disc">장년층(45-60세)은 자녀 양육, 노후 대비, 부동산 등 실물 자산 관리 및 금융 투자 활동이 가장 활발한 연령대임</li></ul><ul id="176a0841-2618-80e1-b69d-ebd3ff78cd3c" class="bulleted-list"><li style="list-style-type:disc">이들은 금융 서비스의 주요 소비층으로, 이들의 금융 행동 유형을 이해하는 것은 맞춤형 금융 전략 설계에 중요하다고 판단</li></ul><h3 id="176a0841-2618-801b-ad0e-c3e88d9356a0" class="">목적</h3><ul id="176a0841-2618-80d5-a727-cfc53ccff20d" class="bulleted-list"><li style="list-style-type:disc">자산의 크기, 소득 수준, 부동산 등 실물 투자 비율을 기준으로 장년층의 금융 행동 성향을 유형화</li></ul><ul id="176a0841-2618-80a8-8cee-f858ccebf0b8" class="bulleted-list"><li style="list-style-type:disc">유형별 특성을 분석하여, 유형에 적합한 금융 전략을 제안</li></ul><p id="176a0841-2618-802b-8fbe-e3956580fc68" class="">
+</p><h2 id="176a0841-2618-800d-9a48-e4b998610492" class="block-color-blue_background">분석 과정</h2><h3 id="176a0841-2618-80ed-8774-f87b02cd2743" class="">데이터 수집</h3><ul id="176a0841-2618-8051-b81c-f10c9fcd3f83" class="bulleted-list"><li style="list-style-type:disc"><strong>데이터 출처:</strong> 2023년 가계금융복지조사 데이터 활용 (통계청)</li></ul><ul id="176a0841-2618-80f2-83b0-ebc3c629c0f7" class="bulleted-list"><li style="list-style-type:disc"><strong>분석 대상자:</strong> 장년층(45-60세) 가구주 5,911명</li></ul><ul id="176a0841-2618-802e-b29c-ec15bf67a763" class="bulleted-list"><li style="list-style-type:disc"><strong>변수 설명</strong><ul id="176a0841-2618-806f-b186-f2fd97efb401" class="bulleted-list"><li style="list-style-type:circle">자산 크기: 개인의 총 자산 규모</li></ul><ul id="176a0841-2618-803d-899d-e3a35b529326" class="bulleted-list"><li style="list-style-type:circle">소득 수준: 연간 경상 소득 (근로소득, 사업소득 등 포함)</li></ul><ul id="176a0841-2618-80b0-bce7-d8e8ad8689ee" class="bulleted-list"><li style="list-style-type:circle">실물 투자 비율: 실물자산(부동산 등)이 총 자산에서 차지하는 비율(%)</li></ul></li></ul><p id="177a0841-2618-80d5-8e2c-def2e93d06b5" class="">
+</p><h3 id="176a0841-2618-80e3-9c6a-f6213ac84b67" class="">데이터 전처리</h3><ul id="176a0841-2618-80b3-9f2c-fed4ae184731" class="bulleted-list"><li style="list-style-type:disc">결측치 처리: 결측치의 경우 0으로 처리 (ex. 연 소득 0으로 간주)</li></ul><ul id="176a0841-2618-8055-86ba-f7f63e81108d" class="bulleted-list"><li style="list-style-type:disc">변수 정규화: 변수 간 단위 차이를 줄이기 위해 Min-Max Scaling 수행</li></ul><ul id="176a0841-2618-8018-93e7-f055549bf569" class="bulleted-list"><li style="list-style-type:disc">소득과 자산은 극단적으로 치우친 분포를 보이므로, 이를 처리하기 위해 동일한 간격으로 20분위로 나누어 극단값의 영향을 완화<br/>(소득: 1~20분위, 자산: 1~20분위)<br/></li></ul><p id="177a0841-2618-8020-8e87-d0cd33019e27" class="">
+</p><h3 id="176a0841-2618-8010-ac86-f01d08809f37" class="">군집화 알고리즘 선택</h3><ul id="176a0841-2618-8057-81e4-e8e96d897e00" class="bulleted-list"><li style="list-style-type:disc">알고리즘: K 평균 클러스터링</li></ul><ul id="176a0841-2618-8007-b30a-fcdd6af46c35" class="bulleted-list"><li style="list-style-type:disc">군집 수 결정: Elbow plot 에서 도출 된 군집수를 바탕으로 다양한 군집의 갯수를 실험하여 최적 군집 수 결정</li></ul><p id="177a0841-2618-80e4-8874-daa437339d2a" class="">
+</p><h3 id="176a0841-2618-80b7-a9e0-ecd0a9ad2798" class="">분석 가설</h3><ul id="176a0841-2618-8061-9c0d-e29b3531c843" class="bulleted-list"><li style="list-style-type:disc">가설 1: 소득 수준과 자산의 크기에 따라 서로 다른 금융적 수요가 존재한다.</li></ul><ul id="177a0841-2618-80ea-9abf-e4233013a3a3" class="bulleted-list"><li style="list-style-type:disc">가설2: 소득 수준과 자산의 크기가 비슷한 집단일지라도 다양한 투자 성향이 존재한다.<ul id="177a0841-2618-80a2-ac76-dd398551f5d4" class="bulleted-list"><li style="list-style-type:circle">(예시) 공격적 부동산 투자형, 저축형, 금융 투자형</li></ul></li></ul><ul id="177a0841-2618-80ca-a1be-e9466184e363" class="bulleted-list"><li style="list-style-type:disc">가설3: 소득 수준이 높지 않더라도 높은 자산을 보유하는 집단이 존재한다.<ul id="177a0841-2618-8087-ac7a-ef91d1e32ba9" class="bulleted-list"><li style="list-style-type:circle">적극적 투자자, 증여 자산이 많은 경우 등</li></ul></li></ul><p id="179a0841-2618-808e-ab45-c81b9077f649" class="">
+</p><h3 id="179a0841-2618-8034-946f-fec18c10ef8a" class="">데이터 탐색: 분위별 소득, 자산의 범위</h3><ul id="179a0841-2618-80e7-90c5-fe01d4e45057" class="bulleted-list"><li style="list-style-type:disc">자산 분위별 자산 범위</li></ul><figure id="179a0841-2618-80f0-b5e1-cec7cfaf798a" class="image" style="text-align:left"><a href="image.png"><img style="width:432px" src="image.png"/></a></figure><p id="179a0841-2618-8015-bf95-ef6ac3bf08fc" class="">
+</p><ul id="179a0841-2618-8064-8751-f03903624967" class="bulleted-list"><li style="list-style-type:disc">소득 분위별 소득 범위</li></ul><figure id="179a0841-2618-8080-a515-ca9c5529f5ce" class="image" style="text-align:left"><a href="image%201.png"><img style="width:432px" src="image%201.png"/></a></figure><p id="179a0841-2618-8054-b11a-e90d9f7a754f" class="">⇒ 우측 편향이 심한 분포를 가지는 소득과 자산에 대해서 편향성을 다소 보완하기 위해 분위별 5%씩 20개의 분위별로 재조정하여 분석에 활용</p><p id="177a0841-2618-80eb-b1ae-f6f28181e88e" class="">
+</p><p id="176a0841-2618-802f-83ba-d587664fcfa0" class="">
+</p><h2 id="176a0841-2618-808d-a6d1-f6a15fb8fc9d" class="block-color-blue_background">분석 결과</h2><h3 id="176a0841-2618-8021-97e3-c2e0673927e9" class="">군집화 결과</h3><figure id="177a0841-2618-80ef-93b4-d893e98aa055" class="image" style="text-align:left"><a href="image%202.png"><img style="width:624px" src="image%202.png"/></a></figure><ul id="15ea0841-2618-809f-b14c-c03b1f0c6e44" class="bulleted-list"><li style="list-style-type:disc">최적 군집 수: 7개</li></ul><ul id="176a0841-2618-80d3-b537-cd952d9f3bb7" class="bulleted-list"><li style="list-style-type:disc">각 군집별 주요 특성<ul id="176a0841-2618-80bd-9d4b-db096659a2a7" class="bulleted-list"><li style="list-style-type:circle"><strong>유형1:</strong> 소득과 자산이 매우 높은 수준이며, 실물 투자 비율이 높은 부동산 집중형</li></ul><ul id="176a0841-2618-8025-acfa-caa711387b76" class="bulleted-list"><li style="list-style-type:circle"><strong>유형2:</strong> 소득과 자산이 매우 높은 수준이며, 금융 투자 비율이 높은 금융 자산 집중형</li></ul><ul id="176a0841-2618-803f-8387-dfff5540ce4e" class="bulleted-list"><li style="list-style-type:circle"><strong>유형3:</strong> 소득 수준은 높지 않으나 자산 규모는 매우 높은 유형으로, 실물 투자 비율이 매우 높은 것으로 보아 공격적 부동산 투자자 혹은 증여 자산이 있는 경우의 유형</li></ul><ul id="176a0841-2618-80bb-8061-d83aff25e08d" class="bulleted-list"><li style="list-style-type:circle"><strong>유형4:</strong> 소득 수준은 중상위 수준이며, 안정적으로 자가를 보유한 유형</li></ul><ul id="176a0841-2618-80c5-972e-df1c047df9c5" class="bulleted-list"><li style="list-style-type:circle"><strong>유형5:</strong> 소득 수준은 중상위 수준이나, 자가를 보유하지 않고 저축을 지향하는 유형</li></ul><ul id="176a0841-2618-8016-a79a-ed822c8d09b8" class="bulleted-list"><li style="list-style-type:circle"><strong>유형6:</strong> 소득 수준은 중하위 수준이며, 자산의 대부분을 부동산 등에 투자한 실거주 자산 중심형</li></ul><ul id="176a0841-2618-80c9-987f-d209a1350566" class="bulleted-list"><li style="list-style-type:circle"><strong>유형7:</strong> 소득 수준과 자산 수준 모두 낮으며, 대부분의 자산을 저축하는 저소득 무자산형</li></ul></li></ul><p id="177a0841-2618-80db-b19d-fa68a03178b7" class="">
+</p><p id="176a0841-2618-8070-ac4e-e8468c32dc60" class="">
+</p><h2 id="176a0841-2618-809f-8b2e-cd32a0ce328c" class="block-color-blue_background">제안: 맞춤형 금융 전략</h2><h3 id="176a0841-2618-80fd-b13f-c6308b14456e" class=""><strong>유형1: 초고소득 부동산 집중형</strong></h3><ul id="176a0841-2618-80d5-8ea0-c83d83d2e14f" class="bulleted-list"><li style="list-style-type:disc">세금 절감 솔루션<ul id="176a0841-2618-806b-bf4f-d25832ce0b1c" class="bulleted-list"><li style="list-style-type:circle">임대소득세 절감 등을 위한 세무 컨설팅</li></ul><ul id="176a0841-2618-80ea-b640-f1ba0336b187" class="bulleted-list"><li style="list-style-type:circle">상속 및 증여세 절감을 위한 신탁 상품 제안</li></ul></li></ul><ul id="176a0841-2618-809b-9dc5-d0f940891691" class="bulleted-list"><li style="list-style-type:disc">포트폴리오 다각화<ul id="176a0841-2618-80af-a679-e8497eead9ee" class="bulleted-list"><li style="list-style-type:circle">기존 부동산 이외의 글로벌 부동산 및 대체 자산 투자 추천</li></ul></li></ul><h3 id="176a0841-2618-80cd-832e-fa112a59686c" class=""><strong>유형2: 초고소득 금융 자산 집중형</strong></h3><ul id="176a0841-2618-8036-9dc7-ecf9379a658a" class="bulleted-list"><li style="list-style-type:disc">투자 솔루션<ul id="176a0841-2618-8002-a6db-fa3e81044057" class="bulleted-list"><li style="list-style-type:circle">글로벌 주식, 채권 ETF 등 투자 추천</li></ul><ul id="176a0841-2618-80f8-8408-c6904cdc016e" class="bulleted-list"><li style="list-style-type:circle">성향에 따라 고소득 안정 배당형 / 암호화폐 또는 사모펀드 등 고위험·고수익 투자 상품 제안</li></ul></li></ul><ul id="176a0841-2618-80ff-88d8-d7fb9ca775db" class="bulleted-list"><li style="list-style-type:disc">리스크 관리 컨설팅<ul id="176a0841-2618-806f-bc05-e9cf4c2489e0" class="bulleted-list"><li style="list-style-type:circle">시장 변동성을 완화할 수 있는 헤지 전략 제안</li></ul></li></ul><h3 id="176a0841-2618-80ed-b1a1-f9a19393dc55" class=""><strong>유형3: 중간소득 공격적 부동산 투자형</strong></h3><ul id="176a0841-2618-809e-ac69-c0d273719dcf" class="bulleted-list"><li style="list-style-type:disc">자산 유동화 및 리스크 분산<ul id="176a0841-2618-801c-997d-c24762c2843c" class="bulleted-list"><li style="list-style-type:circle">부동산 담보 대출을 활용한 추가 투자 기회 제공</li></ul><ul id="176a0841-2618-8098-9f66-edb1df24722b" class="bulleted-list"><li style="list-style-type:circle">금융 자산의 포트폴리오 다각화로 위험 분산 제안</li></ul></li></ul><ul id="176a0841-2618-80b9-9941-feabf28c8c46" class="bulleted-list"><li style="list-style-type:disc">증여/상속 컨설팅</li></ul><ul id="176a0841-2618-80e3-8a1f-d094ef93bd71" class="bulleted-list"><li style="list-style-type:disc">부동산 관리 서비스<ul id="176a0841-2618-805a-9333-f1c843123adf" class="bulleted-list"><li style="list-style-type:circle">공실 관리 및 임대수익 최적화 전략 설계</li></ul></li></ul><h3 id="176a0841-2618-80c2-966b-eee733c7ac82" class=""><strong>유형4: 중상위 소득 &amp; 안정형 부동산 투자자</strong></h3><ul id="176a0841-2618-80d7-a739-ef82927ba77c" class="bulleted-list"><li style="list-style-type:disc">노후 대비 솔루션<ul id="176a0841-2618-8051-9ac4-f95e8e62a38a" class="bulleted-list"><li style="list-style-type:circle">연금저축, 개인형 퇴직연금 등을 활용한 노후 준비 전략 설계</li></ul><ul id="176a0841-2618-8033-90e9-d96cec92eebd" class="bulleted-list"><li style="list-style-type:circle">안정형 금융 상품 추천</li></ul></li></ul><ul id="176a0841-2618-8040-90dd-e0ec5a777137" class="bulleted-list"><li style="list-style-type:disc">부동산 자산 활용 확대<ul id="176a0841-2618-80d6-aa1e-d103193da314" class="bulleted-list"><li style="list-style-type:circle">자가를 활용한 주택담보대출 및 저금리 대출 상품 제안</li></ul><ul id="176a0841-2618-800a-926d-eae839745326" class="bulleted-list"><li style="list-style-type:circle">추가적인 소형 부동산 투자 기회 등 제공</li></ul></li></ul><h3 id="176a0841-2618-801c-9c22-e2f8f7264b8c" class=""><strong>유형5: 중상위 소득 &amp; 저축 지향형</strong></h3><ul id="176a0841-2618-8012-9c4d-c1def6960a7e" class="bulleted-list"><li style="list-style-type:disc">자가 마련 지원 대출 프로그램 제안<ul id="176a0841-2618-80b7-b271-d7e793e2c8ec" class="bulleted-list"><li style="list-style-type:circle">금리 조건이 유리한 주담대 상품 소개</li></ul></li></ul><ul id="176a0841-2618-80ec-b437-cf39123b6871" class="bulleted-list"><li style="list-style-type:disc">목표 기반 투자 계획<ul id="176a0841-2618-80db-a5bd-de698bbe6586" class="bulleted-list"><li style="list-style-type:circle">자가 마련 목표를 위한 적립식 펀드 등 추천</li></ul></li></ul><ul id="176a0841-2618-801a-999f-e3207325e097" class="bulleted-list"><li style="list-style-type:disc">금융 투자 진입 지원<ul id="176a0841-2618-8051-9bff-cd5982ae6863" class="bulleted-list"><li style="list-style-type:circle">소액 투자 가능한 펀드 및 ETF 추천 등</li></ul></li></ul><h3 id="176a0841-2618-8053-984d-e850a83f0cc8" class=""><strong>유형6: 중하위 소득 &amp; 실거주 자산 중심형</strong></h3><ul id="176a0841-2618-8036-89fc-e0295ede4348" class="bulleted-list"><li style="list-style-type:disc">유동성 확대 지원<ul id="176a0841-2618-8004-b297-c04ffc432adc" class="bulleted-list"><li style="list-style-type:circle">소규모 금융 상품(적극, 저축성 보험 등) 추천</li></ul></li></ul><ul id="176a0841-2618-806b-b62f-eacbbe3ae3a9" class="bulleted-list"><li style="list-style-type:disc">비상금 마련 전략<ul id="176a0841-2618-80dc-ad7a-ec82237d82ac" class="bulleted-list"><li style="list-style-type:circle">비상금 마련을 위한 소액 적립식 금융 상품 또는 긴급 자금 조달을 위한 신용 대출 관리 컨설팅 제공</li></ul></li></ul><h3 id="176a0841-2618-80ac-ad6d-ef8292b885ee" class=""><strong>유형7: 저소득 무자산형</strong></h3><ul id="176a0841-2618-8068-b3fb-fc9545602c25" class="bulleted-list"><li style="list-style-type:disc">저비용 금융 상품<ul id="176a0841-2618-803e-b54d-d1187afa2b6d" class="bulleted-list"><li style="list-style-type:circle">소액 적금, 정기예금 등 저비용 금융 상품 추천</li></ul><ul id="176a0841-2618-807b-a779-ef8aca105074" class="bulleted-list"><li style="list-style-type:circle">정부 지원 상품 활용 지원</li></ul></li></ul><ul id="176a0841-2618-8023-b99c-eaef68acc592" class="bulleted-list"><li style="list-style-type:disc">지원 프로그램 연계<ul id="176a0841-2618-8012-b112-ca0b563a43f4" class="bulleted-list"><li style="list-style-type:circle">생활비 부담 완화를 위한 정부 복지 제도 안내</li></ul><ul id="176a0841-2618-8071-8d34-f98ee98af636" class="bulleted-list"><li style="list-style-type:circle">주거 안정 지원 프로그램 소개</li></ul></li></ul><p id="177a0841-2618-80f6-922a-c75d61dc558b" class="">
+</p><p id="177a0841-2618-80e5-bed7-ea0267239760" class="">
+</p><p id="177a0841-2618-8009-83a2-e9a127a506c8" class="">
+</p><p id="177a0841-2618-802c-9df3-d2a669570196" class="">
+</p><p id="177a0841-2618-8076-9b25-f26454d483c8" class="">
+</p><div><hr id="53d46aa6-3ba7-4470-92c3-a71ae47b49f5"/><p id="70d99ee4-0658-42d4-8f1b-98391fb6820b" class="block-color-gray_background">Copyright © 서상우 All rights reserved.</p></div><p id="177a0841-2618-80da-abbb-ca70fe306332" class="">
+</p><p id="177a0841-2618-80e9-b4bf-e6c51369b219" class="">
+</p><p id="177a0841-2618-808c-a25e-c7fb113520a5" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
